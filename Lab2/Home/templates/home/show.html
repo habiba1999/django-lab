@@ -1,0 +1,22 @@
+{% extends 'main/base_layout.html' %}
+
+
+{% block main-content %}
+<div class="container-fluid d-flex flex-column justify-content-center" style="height: 80vh">
+  <h2 class="text-center fw-light"> Welcome to Book Details </h2>
+  <div class="d-flex justify-content-center mt-3 p-2 ">
+    <div class="card col-4 d-flex flex-column align-items-center">
+        <div class="card-body d-flex flex-column align-items-center">
+          <h5 class="card-title">Book Title: <span class="text-secondary">{{ book.title }}</span></h5>
+          <p class="card-title">Book ID:<span class="text-secondary">{{ book.id }}</span></p>
+          <p class="card-title">Book Author:<span class="text-secondary">{{ book.author_name }}</span></p>
+          <p class="card-title">Book Description: <span class="text-secondary">{{ book.description }}</span></p>
+          <p class="card-title">Book Type:<span class="text-secondary"> {{ book.type }}</span></p>
+          <p class="card-title">Book Rate: <span class="text-secondary"> {{ book.rate }}</span></p>
+          <p class="card-title">Book Views: <span class="text-secondary"> {{ book.views }}</span></p>
+
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

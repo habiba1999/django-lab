@@ -1,0 +1,15 @@
+{% extends 'main/base_layout.html' %}
+{% load static %}
+
+{% block title %}Create New Book{% endblock %}
+
+{% block main-content %}
+<link href="{% static 'Home/assets/css/formStyle.css' %}" rel="stylesheet">
+
+<form class="container form" id="form-edit" method="POST"  action="{% url 'BookStore:book-update' book.id  %}">
+  <div class="title">Update a Book</div>
+  {% csrf_token %} {{form.as_p}}
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+{% endblock %}
